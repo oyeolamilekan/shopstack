@@ -35,6 +35,7 @@ Future authLoginUser(email, password) async {
       'msg': 'Unsuccessful login, kindly check your credentials.',
       'status': false
     };
+    
     return loginError ? failedMsg : tokenSucces ? successMsg : false;
   } on SocketException {
     Map<String, dynamic> failedMsg = {
